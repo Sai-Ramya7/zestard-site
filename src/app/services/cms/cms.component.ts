@@ -8,8 +8,8 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class CmsComponent implements OnInit {
 
-  cmsWebsites: any[];
-  services: any[];
+  cmsWebsites: any;
+  services: any;
 
   constructor(private service: ConfigService) { }
 

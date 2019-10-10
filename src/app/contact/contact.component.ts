@@ -9,7 +9,7 @@ import { ConfigService } from '../config.service';
 })
 export class ContactComponent implements OnInit {
 
-  contact: any[];
+  contact: any;
 
   constructor(private service: ConfigService) { }
 

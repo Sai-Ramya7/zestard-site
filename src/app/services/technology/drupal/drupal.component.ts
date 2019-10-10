@@ -10,11 +10,11 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class DrupalComponent implements OnInit {
 
-  drupal: any[];
-  developmentDesc: any[];
-  developmentService: any[];
-  developmentProject: any[];
-  developmentbenefits: any[];
+  drupal: any;
+  developmentDesc: any;
+  developmentService: any;
+  developmentProject: any;
+  developmentbenefits: any;
 
   constructor(private service: ConfigService) { }
 

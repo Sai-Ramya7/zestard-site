@@ -8,8 +8,8 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class PortfolioComponent implements OnInit {
 
-  portfolio: any[];
-  portfolioPosts: any[];
+  portfolio: any;
+  portfolioPosts: any;
   img: any;
 
   constructor(private service: ConfigService) { }

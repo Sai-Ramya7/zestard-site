@@ -8,7 +8,7 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class PartnershipComponent implements OnInit {
 
-  partnership: any[];
+  partnership: any;
   offshore: any;
   reseller: any;
   referral: any;

@@ -9,8 +9,8 @@ import { ConfigService } from '../config.service';
 })
 export class PrivacyPolicyComponent implements OnInit {
 
-  privacy: any[];
-  privacyDetails: any[];
+  privacy: any;
+  privacyDetails: any;
 
   constructor(private service: ConfigService) { }
 

@@ -9,8 +9,8 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class TestimonialsComponent implements OnInit {
 
-  testimonial: any[];
-  testimonialDetails: any[];
+  testimonial: any;
+  testimonialDetails: any;
 
   constructor(private service: ConfigService) { }
 

@@ -9,8 +9,8 @@ import { ConfigService } from '../config.service';
 })
 export class BlogComponent implements OnInit {
 
-  posts: any[];
-  categories: any[];
+  posts: any;
+  categories: any;
 
   constructor(private service: ConfigService) { }
 

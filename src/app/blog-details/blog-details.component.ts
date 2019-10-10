@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BlogDetailsComponent implements OnInit {
 
-  blogDetails: any[];
+  blogDetails: any;
 
   constructor(private service: ConfigService,
               private route: ActivatedRoute) { }

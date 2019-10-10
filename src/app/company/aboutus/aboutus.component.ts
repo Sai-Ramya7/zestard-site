@@ -9,7 +9,7 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class AboutusComponent implements OnInit {
 
-  home: any[];
+  home: any;
   whoweare: any;
   ourValues: any;
   industry: any;

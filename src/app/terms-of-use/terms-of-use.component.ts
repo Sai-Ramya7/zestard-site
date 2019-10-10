@@ -9,8 +9,8 @@ import { ConfigService } from '../config.service';
 })
 export class TermsOfUseComponent implements OnInit {
 
-  terms: any[];
-  termsDetails: any[];
+  terms: any;
+  termsDetails: any;
 
   constructor(private service: ConfigService) { }
 

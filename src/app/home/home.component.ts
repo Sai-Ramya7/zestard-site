@@ -15,12 +15,12 @@ export class HomeComponent implements OnInit {
 
   // $: any;
   selected: any;
-  posts: any[];
-  home: any[];
-  technologyTabs: any[];
-  whatwedo: any[];
-  casestudy: any[];
-  clients: any[];
+  posts: any;
+  home: any;
+  technologyTabs: any;
+  whatwedo: any;
+  casestudy: any;
+  clients: any;
   homeblog: any;
 
   constructor(private service: ConfigService) { }

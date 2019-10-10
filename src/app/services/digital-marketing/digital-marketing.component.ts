@@ -9,10 +9,10 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class DigitalMarketingComponent implements OnInit {
 
-  digitalMarketing: any[];
-  developmentDesk: any[];
-  developmentService: any[];
-  developmentbenefits: any[];
+  digitalMarketing: any;
+  developmentDesk: any;
+  developmentService: any;
+  developmentbenefits: any;
 
   constructor(private service: ConfigService) { }
 

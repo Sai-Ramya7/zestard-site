@@ -9,11 +9,11 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class ShopifyComponent implements OnInit {
 
-  shopify: any[];
-  developmentDesc: any[];
-  developmentService: any[];
-  developmentProject: any[];
-  developmentbenefits: any[];
+  shopify: any;
+  developmentDesc: any;
+  developmentService: any;
+  developmentProject: any;
+  developmentbenefits: any;
 
   constructor(private service: ConfigService) { }
 

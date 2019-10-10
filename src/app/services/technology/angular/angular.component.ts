@@ -9,11 +9,11 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class AngularComponent implements OnInit {
 
-  angular: any[];
-  developmentDesc: any[];
-  developmentService: any[];
-  developmentProject: any[];
-  developmentbenefits: any[];
+  angular: any;
+  developmentDesc: any;
+  developmentService: any;
+  developmentProject: any;
+  developmentbenefits: any;
 
   constructor(private service: ConfigService) { }
 

@@ -9,11 +9,11 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class ReactComponent implements OnInit {
 
-  react: any[];
-  developmentDesc: any[];
-  developmentService: any[];
-  developmentProject: any[];
-  developmentbenefits: any[];
+  react: any;
+  developmentDesc: any;
+  developmentService: any;
+  developmentProject: any;
+  developmentbenefits: any;
 
   constructor(private service: ConfigService) { }
 

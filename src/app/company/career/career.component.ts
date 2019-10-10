@@ -8,8 +8,8 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class CareerComponent implements OnInit {
 
-  careers: any[];
-  careerDetails: any[];
+  careers: any;
+  careerDetails: any;
   id: Array<{cid: number}> = [];
   careerCategory: Array<{cat: object}> = [];
 

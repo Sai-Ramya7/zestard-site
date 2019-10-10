@@ -8,7 +8,7 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class HiredeveloperComponent implements OnInit {
 
-  hireDevelopers: any[];
+  hireDevelopers: any;
   services: any;
 
   constructor(private service: ConfigService) { }

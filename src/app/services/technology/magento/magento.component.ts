@@ -10,11 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MagentoComponent implements OnInit {
 
-  magento: any[];
-  developmentDesc: any[];
-  developmentService: any[];
-  developmentProject: any[];
-  developmentbenefits: any[];
+  magento: any;
+  developmentDesc: any;
+  developmentService: any;
+  developmentProject: any;
+  developmentbenefits: any;
 
   constructor(private service: ConfigService,
               private route: ActivatedRoute) { }

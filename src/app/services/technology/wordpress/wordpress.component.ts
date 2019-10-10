@@ -9,11 +9,11 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class WordpressComponent implements OnInit {
 
-  wordpress: any[];
-  developmentDesc: any[];
-  developmentService: any[];
-  developmentProject: any[];
-  developmentbenefits: any[];
+  wordpress: any;
+  developmentDesc: any;
+  developmentService: any;
+  developmentProject: any;
+  developmentbenefits: any;
 
   constructor(private service: ConfigService) { }
 

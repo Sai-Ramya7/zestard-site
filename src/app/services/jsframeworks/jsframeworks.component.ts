@@ -8,7 +8,7 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class JsframeworksComponent implements OnInit {
 
-  jsFrameworks: any[];
+  jsFrameworks: any;
   services: any;
 
   constructor(private service: ConfigService) { }

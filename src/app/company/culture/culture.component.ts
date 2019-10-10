@@ -8,8 +8,8 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class CultureComponent implements OnInit {
 
-  culture: any[];
-  cultureEvents: any[];
+  culture: any;
+  cultureEvents: any;
 
   constructor(private service: ConfigService) { }
 
