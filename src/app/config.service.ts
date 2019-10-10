@@ -93,13 +93,13 @@ export class ConfigService {
 
   // blog
   getAllPosts() {
-    return this.http.get('https://zestard.com/wp-json/wp/v2/posts?_embed');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/posts');
   }
   getPostImage(id) {
     return this.http.get(`https://zestard.com/wp-json/wp/v2/media/${id}`);
   }
   getPostById(id) {
-    return this.http.get(`https://zestard.com/wp-json/wp/v2/posts/${id}?_embed`);
+    return this.http.get(`https://zestard.com/wp-json/wp/v2/posts/${id}`);
   }
   getAllCategories() {
     return this.http.get('https://zestard.com/wp-json/wp/v2/categories');

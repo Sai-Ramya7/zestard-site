@@ -27,25 +27,25 @@ export class MagentoComponent implements OnInit {
   getService() {
     const ser = this.route.snapshot.paramMap.get('title');
     console.log('ser', ser);
-    if (ser === 'magento-development') {
+    if (ser === 'Magento' || ser === 'magento-development') {
       this.getMagento();
     }
-    if (ser === 'shopify-development') {
+    if (ser === 'shopify-development' || ser === 'Shopify') {
       this.getShopify();
     }
     if (ser === 'woocommerce-development') {
       this.getWoocommerce();
     }
-    if (ser === 'wordpress-avatar') {
+    if (ser === 'wordpress-avatar' || ser === 'WordPress') {
       this.getWordpress();
     }
     if (ser === 'drupal-avatar') {
       this.getDrupal();
     }
-    if (ser === 'react-avatar') {
+    if (ser === 'react-avatar' || ser === 'React') {
       this.getReact();
     }
-    if (ser === 'angular-avatar') {
+    if (ser === 'angular-avatar' || ser === 'Angular') {
       this.getAngular();
     }
   }

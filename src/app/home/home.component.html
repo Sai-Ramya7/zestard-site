@@ -47,7 +47,7 @@
                                 <div class="row">
                                     <div class="col-sm-12 col-12 text-center">
                                         <a class="btn btn-primary learn-more"
-                                        routerLink="/services/{{tech.tt_tab_title}}">Learn More</a>
+                                        routerLink="/services/{{tech?.tt_tab_title}}">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -155,10 +155,10 @@
             class="col-lg-3 col-md-6 col-sm-6 blog-wraper">
                 <a *ngIf="i<4"
                 routerLink="/blog/{{post.id}}">
-                    <div class="card-img"
-                    style="background-image:url('post?.title?.content?.rendered');">
                     <!-- <div class="card-img"
-                    style="background-color: pink;"> -->
+                    style="background-image:url('post?.title?.content?.rendered');"> -->
+                    <div class="card-img"
+                    style="background-color: pink;">
                     </div>
                     <div class="card-content">
                         {{post?.title?.rendered}}

@@ -34,6 +34,7 @@ const routes: Routes = [
   { path: 'services/javascript-framework', component: JsframeworksComponent },
   { path: 'services/hire-dedicated-developer', component: HiredeveloperComponent },
   { path: 'services/digital-marketing', component: DigitalMarketingComponent },
+  { path: 'services/Digital Marketing', component: DigitalMarketingComponent },
   { path: 'services/:title', component: MagentoComponent },
   { path: 'portfolio/all-portfolio', component: PortfolioComponent },
   { path: 'blog', component: BlogComponent },
