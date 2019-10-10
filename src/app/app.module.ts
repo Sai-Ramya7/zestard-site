@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { PortfolioComponent } from './work/portfolio/portfolio.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RecaptchaDirective } from './recaptcha.directive';
 
 @NgModule({
   declarations: [
@@ -60,13 +62,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AngularComponent,
     PrivacyPolicyComponent,
     TermsOfUseComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RecaptchaDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

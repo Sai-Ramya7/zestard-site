@@ -30,45 +30,98 @@
                         <div class="col-xl-10 col-md-10 col-lg-10 col-sm-11 col-xs-11 col-11 mx-auto card">
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 form-detail col-xs-12">
-                                    <div class
-                                    [innerHtml]="contact?.acf.contact_form_area">
-                                        <div class="frm_forms " id="frm_form_1_container">
-                                            <form enctype="multipart/form-data" method="post"
-                                            class="frm-show-form  frm_js_validate  frm_pro_form  frm_ajax_submit "
-                                            id="form_contact-form">
-                                                <!-- <script type="text/javascript">
-                                                    document.addEventListener('DOMContentLoaded',function(){frmFrontForm.scrollMsg(1);})
-                                                </script> -->
-                                                <!-- <div class="frm_error_style">
-                                                    There was a problem with your submission. Errors are marked below.
-                                                </div> -->
-                                                <div class="frm_form_fields ">
-                                                    
-                                                    <fieldset>
-                                                        <legend class="frm_screen_reader">
-                                                            Contact US
-                                                        </legend>
-                                                        <div class="frm_fields_container">
-                                                            <input type="hidden" name="frm_action" value="create"/>
-                                                            <input type="hidden" name="form_id" value="1" />
-                                                            <input type="hidden" name="frm_hide_fields_1" id="frm_hide_fields_1" value="" />
-                                                            <input type="hidden" name="form_key" value="contact-form" />
-                                                            <input type="hidden" name="item_meta[0]" value="" />
-                                                            <input type="hidden" id="frm_submit_entry_1" name="frm_submit_entry_1" value="e5700c485f" />
-                                                            <input type="hidden" name="_wp_http_referer" value="/contact-us/" />
-                                                            <label for="frm_verify_1" class="frm_screen_reader frm_hidden">If you are human, leave this field blank.</label>
-                                                            <input type="text" class="frm_hidden frm_verify" id="frm_verify_1" name="frm_verify" value=""  />
-                                                            <div id="frm_field_1_container" 
-                                                            class="frm_form_field form-field  frm_required_field frm_blank_field frm_top_container bmd-label-floating frm_first frm_full">
-                                                                <label for="field_qh4icy" id="field_qh4icy_label" class="frm_primary_label">Full Name
-                                                                    <span class="frm_required">*</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>    
-                                                    </fieldset>
+                                    <div [innerHtml]="contact?.acf.contact_form_area"></div> 
+                                        <!-- <div class="frm_forms " id="frm_form_1_container"> -->
+                                            <!-- form here -->
+                                            <div>
+                                                <div *ngIf="click && contactForm.status === 'VALID'">
+                                                    <span style="color: #fff;">
+                                                        Thank you. We've received your Inquiry. We'll get back to you soon.
+                                                    </span>
                                                 </div>
-                                            </form>
-                                        </div>
+                                                <div *ngIf="click && contactForm.status === 'INVALID'">
+                                                    <span style="color: #fff;">
+                                                        There was a problem with your submission. Errors are marked below.
+                                                    </span>
+                                                </div>
+                                                <form [formGroup]="contactForm"
+                                                *ngIf="!click || contactForm.status === 'INVALID'">
+                                                    <label class="form-group">
+                                                        <span>Full Name<i>*</i></span>
+                                                        <input type="text" formControlName="fullName"
+                                                        class="form-control" name="fullName">
+                                                        <div *ngIf="contactForm.controls.fullName.invalid && click">
+                                                            <div *ngIf="contactForm.controls.fullName.errors.required">
+                                                                <span style="color: red;">
+                                                                    This field cannot be blank.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </label><br>
+                                                    <label class="form-group">
+                                                        <span>Email<i>*</i></span>
+                                                        <input type="text" formControlName="email"
+                                                        class="form-control" name="email">
+                                                        <div *ngIf="contactForm.controls.email.invalid && click">
+                                                            <div *ngIf="contactForm.controls.email.errors.required">
+                                                                <span style="color: red;">
+                                                                    This field cannot be blank.
+                                                                </span>
+                                                            </div>
+                                                            <div *ngIf="contactForm.controls.email.errors.email">
+                                                                <span style="color: red;">
+                                                                    Please enter a valid email address.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </label><br>
+                                                    <label class="form-group">
+                                                        <span>Phone<i>*</i></span>
+                                                        <input type="text" formControlName="phone"
+                                                        class="form-control" name="phone">
+                                                        <div *ngIf="contactForm.controls.phone.invalid && click">
+                                                            <div *ngIf="contactForm.controls.phone.errors.required">
+                                                                <span style="color: red;">
+                                                                    This field cannot be blank.
+                                                                </span>
+                                                            </div>
+                                                            <div *ngIf="contactForm.controls.phone.errors.pattern">
+                                                                <span style="color: red;">
+                                                                    Phone number is Invalid.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </label><br>
+                                                    <label class="form-group">
+                                                        <span>Subject<i>*</i></span>
+                                                        <input type="text" formControlName="subject"
+                                                        class="form-control" name="subject">
+                                                        <div *ngIf="contactForm.controls.subject.invalid && click">
+                                                            <div *ngIf="contactForm.controls.subject.errors.required">
+                                                                <span style="color: red;">
+                                                                    This field cannot be blank.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </label><br>
+                                                    <label class="form-group">
+                                                        <span>Message<i>*</i></span>
+                                                        <textarea formControlName="message"
+                                                        class="form-control" rows="6" name="message"></textarea>
+                                                        <div *ngIf="contactForm.controls.message.invalid && click">
+                                                            <div *ngIf="contactForm.controls.message.errors.required">
+                                                                <span style="color: red;">
+                                                                    This field cannot be blank.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </label><br>
+                                                    <!-- <div nbRecaptcha key="public key" formControlName="captcha"></div> -->
+                                                    <button class="frm_button_submit frm_final_submit btn-primary" 
+                                                    type="submit" formnovalidate="formnovalidate"
+                                                    (click)="clickbtn()">Send</button>
+                                                </form>
+                                        <!-- </div> -->
                                     </div>
                                 </div>
                                 <div class="is-submitted">
@@ -86,3 +139,43 @@
         </section>
     </div>
 </div>    
+
+
+
+
+<!-- <form enctype="multipart/form-data" method="post"
+class="frm-show-form  frm_js_validate  frm_pro_form  frm_ajax_submit "
+id="form_contact-form">
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded',function(){frmFrontForm.scrollMsg(1);})
+    </script> -->
+    <!-- <div class="frm_error_style">
+        There was a problem with your submission. Errors are marked below.
+    </div>
+    <div class="frm_form_fields ">
+        <fieldset>
+            <legend class="frm_screen_reader">
+                Contact US
+            </legend>
+            <div class="frm_fields_container">
+                <input type="hidden" name="frm_action" value="create"/>
+                <input type="hidden" name="form_id" value="1" />
+                <input type="hidden" name="frm_hide_fields_1" id="frm_hide_fields_1" value="" />
+                <input type="hidden" name="form_key" value="contact-form" />
+                <input type="hidden" name="item_meta[0]" value="" />
+                <input type="hidden" id="frm_submit_entry_1" name="frm_submit_entry_1" value="e5700c485f" />
+                <input type="hidden" name="_wp_http_referer" value="/contact-us/" />
+                <label for="frm_verify_1" class="frm_screen_reader frm_hidden">If you are human, leave this field blank.</label>
+                <input type="text" class="frm_hidden frm_verify" id="frm_verify_1" name="frm_verify" value=""  />
+                <div id="frm_field_1_container" 
+                class="frm_form_field form-field  frm_required_field frm_blank_field frm_top_container bmd-label-floating frm_first frm_full">
+                    <label for="field_qh4icy" id="field_qh4icy_label" class="frm_primary_label">Full Name
+                        <span class="frm_required">*</span>
+                    </label>
+                </div>
+            </div>    
+        </fieldset>
+    </div>
+</form> -->
+
+<!-- Thank you. We've received your Inquiry. We'll get back to you soon. -->

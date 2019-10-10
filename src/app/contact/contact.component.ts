@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ConfigService } from '../config.service';
+import { FormControl, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,11 +11,23 @@ import { ConfigService } from '../config.service';
 export class ContactComponent implements OnInit {
 
   contact: any;
+  contactForm;
+  click = false;
+  phoneRegEx = '^[0-9]{10,12}$';
 
-  constructor(private service: ConfigService) { }
+  constructor(private service: ConfigService,
+              private fb: FormBuilder) { }
 
   ngOnInit() {
     this.getContact();
+    this.contactForm = this.fb.group({
+      fullName: ['', Validators.required],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      phone: ['', Validators.compose([Validators.required, Validators.pattern(this.phoneRegEx)])],
+      subject: ['', Validators.required],
+      message: ['', Validators.required],
+      captcha: new FormControl(),
+    });
   }
 
   getContact() {
@@ -24,4 +37,10 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  clickbtn() {
+    this.click = true;
+    // if (this.contactForm.status === 'INVALID') {
+    //   this.click = false;
+    // }
+  }
 }
