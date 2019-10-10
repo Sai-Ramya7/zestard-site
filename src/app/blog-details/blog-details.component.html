@@ -1,0 +1,85 @@
+<section>
+    <div class="blog-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="hestia-title">
+                        {{ blogDetails?.title.rendered }}
+                    </h1>
+                    <h4 class="author-details">
+                        Published
+                        <span class="byline">
+                            by 
+                            <span class="author vcard">
+                                <a href="" class="url fn n">
+                                    {{blogDetails?.author}}
+                                </a>
+                            </span>
+
+                        </span>
+                        <span class="posted-on">
+                            on 
+                            <time class="entry-date published updated"
+                            datetime="2019-09-06T10:37:59+00:00">
+                                {{ blogDetails?.date | date:shortDate }}
+                            </time>
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main blog-post blog-post-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 sticky">
+                    <div class="blog-social" id="sidebar">
+                        <h3>Share</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/share.php?u=https://www.zestard.com/blog/impressive-about-us-page/&amp;t=9 Tips to Write an Impressive About Us Page in 2020.">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/home?status=https://www.zestard.com/blog/impressive-about-us-page/">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" 
+                                href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.zestard.com/blog/impressive-about-us-page/title=9 Tips to Write an Impressive About Us Page in 2020.source=https://www.zestard.com">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-post-wrap col-md-8">
+                    <article id="post-{{blogDetails?.id}}" 
+                    class="post-{{blogDetails?.id}} post type-post 
+                    status-publish  format-standard has-post-thumbnail 
+                    hentry category-design category-tips-and-tricks">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="single-blog-desc">
+                                    <div class="content-description"
+                                    [innerHtml]="blogDetails?.content.rendered">
+                                        <!-- <figure class="wp-block-image">
+                                                <img alt="" class="wp-image-2591" 
+                                                src=""
+                                                srcset="https://www.zestard.com/wp-content/uploads/2019/09/how-to-write-an-impressive-about-us-page-3-1.jpg 750w, https://www.zestard.com/wp-content/uploads/2019/09/how-to-write-an-impressive-about-us-page-3-1-300x128.jpg 300w" 
+                                                sizes="(max-width: 750px) 100vw, 750px">
+                                        </figure> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

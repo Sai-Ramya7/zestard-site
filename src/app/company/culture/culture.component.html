@@ -1,0 +1,52 @@
+<section>
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                    <img 
+                    src="{{culture?.acf.header_mascot}}" alt="mascot">
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                    <div class="page-detail">
+                        <h5>{{culture?.acf.header_section_title}}</h5>
+                        <h1 class="title">
+                            {{culture?.acf.header_page_title}}
+                        </h1>
+                        <h4 class="sub-title">
+                            {{culture?.acf.header_sub_text}}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let item of cultureEvents"
+        class="col-lg-4 col-md-6 col-sm-6 culture-box-wrap">
+            <div class="events-wrapper card" style="height: fixed">
+                <div class="gallery-image" 
+                style="background-image:url('item.acf.el_gallery[0].url')">
+                    <!-- <img src="{{item.acf.el_gallery[1]?.url}}" class="card-img-top" alt="..."> -->
+                    <div class="view-more">
+                        <a href="">View All</a>
+                    </div>
+                </div>
+                <div class="card-body event-title">
+                    <h3>{{item.title.rendered}}</h3>
+                </div>
+                <!-- <div class="gallery-image">
+                    <img src="{{item.acf.el_gallery[1]?.url}}" class="card-img-top" alt="...">
+                    <div class="view-more">
+                        <a href="">View All</a>
+                    </div>
+                </div>
+                <div class="card-body event-title">
+                    <h3>{{item.title.rendered}}</h3>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- style="background-image: url('event.el_gallery[url]')" -->

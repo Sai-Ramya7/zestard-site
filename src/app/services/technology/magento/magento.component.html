@@ -1,0 +1,125 @@
+<div id="page" class="site technology-detail">
+    <div id="content" class="site-content">
+        <section>
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                            <img src="{{magento?.acf?.header_mascot}}" alt="">
+                        </div>
+                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                            <div class="page-detail">
+                                <h5>{{magento?.acf.header_section_title}}</h5>
+                                <h1 class="title">
+                                    {{magento?.acf.header_page_title}}
+                                </h1>
+                                <h4 class="sub-title">
+                                    {{magento?.acf.header_sub_text}}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="development-desc">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12 col-12">
+                            <h2>{{developmentDesc?.tech_about_heading}}</h2>
+                            <div class="about-tech"
+                            [innerHtml]="developmentDesc?.tech_about_content"></div>
+                        </div>
+                        <div id="right-desc" 
+                        class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12 col-12"
+                        [innerHtml]="developmentDesc?.tech_about_right_content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="development-service">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+                            <h2>{{developmentService?.tech_services_heading}}</h2>
+                            <h6 [innerHtml]="developmentService?.tech_sub_heading"></h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div *ngFor="let service of developmentService?.tech_services_list"
+                        class="col-lg-4 col-md-6 col-sm-6 col-12 mobile mb-5">
+                            <div class="info">
+                                <div class="head">
+                                    <div class="title">
+                                        {{ service.tech_service_name }}
+                                    </div>
+                                </div>
+                                <p [innerHtml]="service.tech_service_description"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="development-project">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <a href="javascript:void(0);">
+                                        <h3 class="project-title">
+                                            <!-- {{}} -->
+                                        </h3>
+                                        <img class="img-raised"
+                                        src="" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-12 col-12"></div>                        
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6">
+                            <h2>{{developmentProject?.tech_portfolio_heading}}</h2>
+                            <p>{{developmentProject?.tech_portfolio_sub_heading}}</p>
+                            <a href="https://www.google.com" class="btn btn-primary">
+                                Browse Our Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="development-benefits">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+                            <h2>Key Benefits Of {{developmentbenefits?.tech_keyb_heading}}</h2>
+                            <h6>{{developmentbenefits?.tech_keyb_sub_heading}}</h6>
+                        </div>
+                    </div>
+                    <div class="benefites-work">
+                        <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+                            <div class="row">
+                                <div *ngFor="let benefit of developmentbenefits?.tech_key_features_repeater"
+                                class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12">
+                                    <div class="benefites-grp">
+                                        <span>
+                                            <div class="benefites-image">
+                                                <img src="https://www.zestard.com/wp-content/themes/zestard/images/technology/benefite-icon.png" 
+                                                alt="">{{benefit?.tech_key_features}}
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,288 @@
+.page-header{
+    margin: 0px;
+    padding: 50px 0px;
+    margin-top: 53px;
+    @media screen and (max-width: 575px){
+        padding: 30px 0;
+    }
+}
+.page-header {
+    background-image: url('./../../images/common-banner.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @media(max-width: 767px){
+        background: linear-gradient(-14deg, #009fff 21%, #0974d5 30%, #053ab1 46%, #06284e 92%);
+    }
+    img { 
+        display: block;
+        margin: 0 auto;
+        height: 320px;
+        @media only screen and (max-width: 576px) {
+            height: 250px;
+        }
+    }
+    h5 {
+        font-size: 25px;
+        font-weight: 300;
+        color: #ffffff;
+        line-height: 30px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
+        @media screen and (max-width: 575px){
+            margin-top: 20px;
+        }
+    }
+    .title {
+        font-family: 'Open Sans', sans-serif;
+        color: #ffffff;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+        line-height: 60px;
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: 0px;
+        padding-bottom: 10px;
+        &:after {
+            width: 73px;
+            background: #33a2de;
+            height: 5px;
+            content: "";
+            position: absolute;
+            left: 4px;
+            bottom: 0;
+        }
+        @media(max-width: 767px){
+            font-size: 38px;
+        }
+    }
+    .sub-title {
+        font-family: 'Roboto', sans-serif;
+        color: #ffffff;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 17px;
+        line-height: 25px;
+        margin-top: 8px;
+    }
+}
+
+
+
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+}
+
+
+
+
+.about-page {
+    .who-we-are {
+        margin: 100px 0px 70px 0px;
+        h2 {
+            font-size: 30px;
+            color: #434e5a;
+            line-height: 40px;
+            text-align: left;
+            font-weight: bold;
+            margin: 0 0 16px 0px;
+            text-transform: capitalize;
+            @media only screen and (max-width: 768px) {
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+        @media(max-width: 767px){
+            margin: 35px 0px 35px 0px;
+        }
+         p {
+            font-size: 17px;
+            font-family: 'Roboto', sans-serif;
+            color: #7b7b7b;
+            line-height: 1.7;
+            text-align: left;
+            margin-bottom: 0px;
+            @media only screen and (max-width: 768px) {
+                font-size: 15px;
+            }
+            @media only screen and (max-width: 575px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .our-values {
+        position: relative;
+        overflow: hidden;
+        padding: 70px 0px;
+        background: #e8eef2;
+        h2 {
+            font-size: 30px;
+            color: #434e5a;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            margin: 0 0 50px 0px;
+            text-transform: capitalize;
+            @media only screen and (max-width: 768px) {
+                font-size: 25px;
+            }
+            @media only screen and (max-width: 575px) {
+                margin-bottom: 30px;
+            }
+        }
+        @media(max-width: 767px){
+            padding: 55px 0px 35px;
+        }
+        .our-values-box-wrapper {
+            margin-bottom: 30px;
+            &:nth-child(n+5) {
+                margin-bottom: 0px;
+                @media only screen and (max-width: 991px) {
+                    margin-bottom: 30px;
+                }
+            }
+            .our-values-box {
+                padding: 30px 15px;
+                margin-bottom: 30px;
+                transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+                background-color: #ffffff;
+                height: 100%;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px #a7a7a7;
+                &:hover {
+                    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(58, 49, 60, 0.6);
+                }
+                .icon {
+                    display: inline-flex;
+                    margin-bottom: 30px;
+                    img {
+                        margin: 0 auto;
+                        width: 50%;
+                    }
+                }
+                h3 {
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 20px;
+                    color: #4c4c4c;
+                    line-height: 26px;
+                    font-weight: 600;
+                    margin: 0px 0px 10px 0px;
+                }
+                p {
+                    font-size: 17px;
+                    font-family: 'Roboto', sans-serif;
+                    color: #737373;
+                    line-height: 20px;
+                    text-align: center;
+                    margin-bottom: 0px;
+                    font-weight: 300;
+                    @media only screen and (max-width: 768px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .why-choose {
+        padding: 70px 0px 20px;
+        background: #e8eef2;
+        @media only screen and (max-width: 768px) {
+            padding: 55px 0px 5px;
+        }
+        // background: #013a71;
+        .title {
+            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            color: #393b3c;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 50px;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #393b3c;
+            line-height: 45px;
+            text-align: center;
+            margin: 0px 0px 50px 0px;
+            @media only screen and (max-width: 768px) {
+                font-size:25px;
+            }
+        }
+        .box {
+            margin-bottom: 50px;
+            h5 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                color: #ffffff;
+                margin-top: 0px;
+                margin-bottom: 5px;
+                line-height: 30px;
+                letter-spacing: 0.5px;
+                @media only screen and (max-width: 768px) {
+                    font-size:18px;
+                }
+            }
+            p {
+                margin-bottom: 0px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 17px;
+                font-weight: 300;
+                color: #a4b4c3;
+                line-height: 30px;
+                @media only screen and (max-width: 768px) {
+                    font-size:15px;
+                }
+            }
+        }
+    }
+    .footer-provide {
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            padding: 70px;
+        }    
+        .title {
+            color: #434e51;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 50px;
+            line-height: 60px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            span {
+                font-size: 22px;
+            }
+        }
+        .subtitle {
+            color: #444343;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            h4 {
+                font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            }
+        }
+        .get-in-touch {
+            display: inline-block;
+            font-weight: 600;
+            font-style: normal;
+            background: linear-gradient(-45deg, #9fcb29 0%, #5bb53f 100%);
+            padding: 15px 50px;
+            margin-top: 45px;
+            border-radius: 5px;
+            font-size: 24px;
+            line-height: 30px;
+            text-transform: capitalize;
+            border: none;
+        }
+    }
+}

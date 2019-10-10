@@ -1,0 +1,91 @@
+<div id="page" class="site career">
+    <div id="content" class="site-content">
+        <section>
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                            <img class="career-avatar" src="{{careers?.acf.header_mascot}}" alt="">
+                        </div>
+                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                            <div class="page-detail">
+                                <h5>{{ careers?.acf.header_section_title }}</h5>
+                                <h1 class="title">{{ careers?.acf.header_page_title }}</h1>
+                                <h4 class="sub-title">{{ careers?.acf.header_sub_text }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="career-container">
+            <div class="open-position">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                            <h2 class="title">Open Position</h2>
+                            <h6>We help companies from all over the world reach their business goals.</h6>                   
+                        </div>
+                    </div>
+                    <div class="job-open">
+                        <div class="row">
+                            <div *ngFor="let item of careerDetails;let i=index"
+                            class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-12 ">
+                                <div class="card">
+                                    <div *ngFor="let cat of careerCategory">
+                                        <span *ngIf="item.career_category[0] === cat.id">
+                                            <h3>{{ cat.name }}</h3>
+                                        </span>
+                                    </div>
+                                    <div class="row padding-bottom">
+                                        <div class="col-xl-7 col-lg-7 col-sm-12">
+                                            <h4>{{ item.title.rendered }}</h4>
+                                            <span>No. of opening: 3</span><br>
+                                            <span>Full time - India</span>
+                                        </div>
+                                        <div class="col-xl-5 col-lg-5 col-sm-12">
+                                            <a class="btn btn-primary" href="mailto:hr@zestard.com">Apply Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+
+<!-- <ul class="list-unstyled list-inline">
+        <li *ngFor="let item of careerDetails;let i=index" class="list-inline-item careercard">
+            <div class="card shadow p-3 mb-4 bg-white rounded" style="width: 27.7rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card-title">
+                                <ul class="list-unstyled">
+                                <li *ngFor="let cat of careerCategory">       
+                                    <div *ngIf="item.career_category[0] === cat.id">
+                                        <h4><b>{{ cat.name }}</b></h4>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                            <h5 class="card-title">{{ item.title.rendered }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <span>No. of opening: 3<br>Full time - India</span>
+                            </h6>
+                        </div>
+                        <div class="rdiv">
+                            <a class="btn btn-primary" href="mailto:hr@zestard.com">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul> -->
+<!-- https://www.zestard.com/wp-json/wp/v2/career_category/213 -->

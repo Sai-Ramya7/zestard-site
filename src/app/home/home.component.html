@@ -1,0 +1,194 @@
+<div id="content" class="site-content">
+    <section>
+        <div class="page-home-header">
+            <div class="herobkg-animated">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                            <img class="home-avatar"
+                            src="{{home?.acf?.header_mascot}}" alt="">
+                        </div>
+                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                            <div class="page-detail">
+                                <h5>{{home?.acf?.header_section_title}}</h5>
+                                <h1 class="title">{{home?.acf?.header_page_title}}</h1>
+                                <h4 class="sub-title">{{home?.acf?.header_sub_text}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="services">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12 text-center">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li *ngFor="let tech of technologyTabs; let i=index" 
+                            class="nav-item item-{{i+1}}" (mouseover)="select($event,tech)"
+                            [ngClass]="{active: isActive(tech)}">
+                                <a aria-selected="false" 
+                                class="nav-link" data-toggle="tab"
+                                href="#tab_{{i+1}}" role="tab">
+                                    <p>
+                                        <img src="{{tech.tt_title_icon.url}}" alt="">
+                                        <span>{{tech.tt_tab_title}}</span>
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content tab-space">
+                            <div *ngFor="let tech of technologyTabs; let i=index"
+                            class="tab-pane" id="tab_{{i+1}}" role="tabpanel">
+                                <h2 class="title text-center">{{tech.tt_tab_description_heading}}</h2>
+                                <p [innerHtml]="tech.tt_tab_description"></p>
+                                <div class="row">
+                                    <div class="col-sm-12 col-12 text-center">
+                                        <a class="btn btn-primary learn-more"
+                                        routerLink="/services/{{tech.tt_tab_title}}">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="what-we-do">
+            <div class="container">
+                <div class="row">
+                    <div class="service-head col-lg-12">
+                        <h2 class="title text-center">
+                            {{whatwedo?.home_service_heading}}
+                        </h2>
+                    </div>
+                    <div class="service-content">
+                        <div class="row row-eq-height">
+                            <div *ngFor="let item of whatwedo?.home_services"
+                            class="col-lg-6 col-md-6 col-sm-12 hm-service-card">
+                                <div class="content-col card">
+                                    <div class="row service-head">
+                                        <div class="col-md-3 col-sm-3 col-3 text-xs-center service-img">
+                                            <img alt=""
+                                            src="{{item.home_service_icon.url}}">
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-12 text-xs-center p-xs-0">
+                                            <div class="title">
+                                                {{item.home_service_name}}
+                                            </div>
+                                            <p>{{item.home_service_description}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="view-casestudy">
+            <div class="container">
+                <div class="row home-portfolio-sec">
+                    
+                    <div class="col-md-4 col-lg-3 col-sm-12 tablet">
+                        <div class="project-detail jbdetails"
+                        [innerHtml]="casestudy?.home_description_ps">
+                        </div>
+                        <div class="view-projects-btn mb-md-4">
+                            <a class="btn btn-primary" rel="nofollow"
+                            href="https://jadeblue.com/" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-lg-9 col-sm-12 tablet">
+                        <div class="product-img">
+                            <img alt="" width="726px" height="456px"
+                            src="{{casestudy?.home_featured_image_ps.url}}">
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="industry">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="clients-wrapper m-xs-0 m-sm-0 mb-sm-4 text-center">
+                            <h2 class="title">{{clients?.ch_title}}</h2>
+                            <div class="row m-0">
+                                <div *ngFor="let client of clients?.ch_clients_logos"
+                                class="col-md-2  mb-md-4 px-xs-2 pb-xs-4 col-12 client-logo mobile">
+                                    <img src="{{client?.url}}" alt=""
+                                    width="127.16px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="home-blogs">
+    <div class="container">
+        <div class="col-sm-12 text-center">
+            <h2 class="title">{{homeblog?.hm_blog_heading}}</h2>
+        </div>
+        <div class="row hm-blog-wrap ">
+            <div *ngFor="let post of posts;let i=index;"
+            class="col-lg-3 col-md-6 col-sm-6 blog-wraper">
+                <a *ngIf="i<4"
+                routerLink="/blog/{{post.id}}">
+                    <div class="card-img"
+                    style="background-image:url('post?.title?.content?.rendered');">
+                    <!-- <div class="card-img"
+                    style="background-color: pink;"> -->
+                    </div>
+                    <div class="card-content">
+                        {{post?.title?.rendered}}
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">.sfsd..</div>
+    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">..dddd.</div>
+    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+</div> -->

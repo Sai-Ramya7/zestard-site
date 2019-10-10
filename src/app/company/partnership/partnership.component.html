@@ -1,0 +1,75 @@
+<div id="page" class="site partnership-page">
+    <div id="content" class="site-content">
+        <section>
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                            <img 
+                            src="{{partnership?.acf.header_mascot}}" alt="mascot">
+                        </div>
+                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                            <div class="page-detail">
+                                <h5>{{partnership?.acf.header_section_title}}</h5>
+                                <h1 class="title">
+                                    {{partnership?.acf.header_page_title}}
+                                </h1>
+                                <h4 class="sub-title">
+                                    {{partnership?.acf.header_sub_text}}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="partner-type offshare">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-7">
+                            <h2 class="title">{{offshore?.gen_left_heading}}</h2>
+                            <p [innerHtml]="offshore?.gen_left_description"></p>
+                        </div>
+                        <div class="col-md-5 col-lg-5">
+                            <img src="{{offshore?.gen_two_sec_image}}" 
+                            alt="" width="390.41" height="287.75">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="partner-type reseller">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-5">
+                            <img src="{{reseller?.gen_two_sec_image}}" 
+                            alt="" width="390.41" height="287.75">
+                        </div>
+                        <div class="col-md-7 col-lg-7">
+                            <h2 class="title">{{reseller?.gen_right_heading}}</h2>
+                            <p [innerHtml]="reseller?.gen_right_description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="partner-type referral">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-7">
+                            <h2 class="title">{{referral?.gen_left_heading}}</h2>
+                            <p [innerHtml]="referral?.gen_left_description"></p>
+                        </div>
+                        <div class="col-md-5 col-lg-5">
+                            <img src="{{referral?.gen_two_sec_image}}" 
+                            alt="" width="390.41" height="287.75">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>    
+</div>    

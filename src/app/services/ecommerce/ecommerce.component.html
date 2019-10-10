@@ -1,0 +1,94 @@
+<div id="content" class="site-content">
+    <section>
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                        <img src="{{ ecommerceDetails?.acf.header_mascot }} " 
+                        alt="header" width="400px;" height="250px;">
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                        <div class="page-detail">
+                            <h5>{{ ecommerceDetails?.acf.header_section_title }}</h5>
+                            <h1 class="title">
+                                {{ ecommerceDetails?.acf.header_page_title }}
+                                <!-- ::after -->
+                            </h1>
+                            <h4 class="sub-title">
+                                {{ ecommerceDetails?.acf.header_sub_text }}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="technology-page">
+        <section *ngFor="let service of services">
+            <div class="technology-odd">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-4 tech-img">
+                            <img src="{{ service?.sl_service_image?.url }}" alt="icon"
+                            width = "250px;" height = "250px;">
+                        </div>
+                        <div class="col-md-7 col-lg-8 tech-content">
+                            <h2><a routerLink="/services/{{service?.sl_service_image?.title}}/">
+                                {{ service.sl_service_name }}
+                            </a></h2>
+                            <p [innerHtml]="service.sl_service_sub_text">            
+                            </p>
+                            <a routerLink="/services/{{service?.sl_service_image?.title}}/" class="btn btn-lg btn-default">View More</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+    
+    
+<!-- <ul class="list-unstyled">
+    <li *ngFor="let service of services">
+        <div class="row">
+            <div class="col-md-5 col-lg-4 tech-img">
+                <img src="{{ service?.sl_service_image?.url }}" alt="icon">
+            </div>
+            <div class="col-md-7 col-lg-8 tech-content">
+                <h2><b>{{ service.sl_service_name }}</b></h2>
+                <p [innerHtml]="service.sl_service_sub_text"></p>
+                <a class="btn btn-primary">View More</a>
+            </div>
+        </div>
+    </li>
+</ul>  -->
+<!-- <div class="container-fluid">
+    <div class="parentimg">
+        <img src="https://www.zestard.com/wp-content/themes/zestard/images/common-banner.png" 
+        alt="..." width="1008px;" height="400px;">
+    </div>
+    <div class="childimg">
+        <img src="{{ ecommerceDetails?.acf.header_mascot }} " 
+        alt="header" width="400px;" height="250px;">
+    </div>
+    <div class="childcontent">
+        <h4>{{ ecommerceDetails?.acf.header_section_title }}</h4>
+        <h1><b>{{ ecommerceDetails?.acf.header_page_title }}</b></h1>
+        <p>{{ ecommerceDetails?.acf.header_sub_text }}</p>
+    </div>
+    <div></div>
+    <table class="table table-borderless" cellpadding="15px;">
+        <tr *ngFor="let service of services">
+            <td>
+                <img src="{{ service?.sl_service_image?.url }}" alt="icon"
+                width = "250px;" height = "250px;">
+            </td>
+            <td>
+                <h2><b>{{ service.sl_service_name }}</b></h2>
+                <div [innerHtml]="service.sl_service_sub_text">            
+                </div>
+                <button class="btn btn-lg btn-default">View More</button>
+            </td>
+        </tr>
+    </table>
+</div> -->

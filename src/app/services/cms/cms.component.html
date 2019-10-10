@@ -1,0 +1,49 @@
+<div id="content" class="site-content">
+    <section>
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                        <img src="{{ cmsWebsites?.acf.header_mascot }} " 
+                        alt="header" width="400px;" height="250px;">
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                        <div class="page-detail">
+                            <h5>{{ cmsWebsites?.acf.header_section_title }}</h5>
+                            <h1 class="title">
+                                {{ cmsWebsites?.acf.header_page_title }}
+                                <!-- ::after -->
+                            </h1>
+                            <h4 class="sub-title">
+                                {{ cmsWebsites?.acf.header_sub_text }}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="technology-page">
+        <section *ngFor="let service of services">
+            <div class="technology-odd">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-4 tech-img">
+                            <img src="{{ service?.sl_service_image?.url }}" alt="icon"
+                            width = "250px;" height = "250px;">
+                        </div>
+                        <div class="col-md-7 col-lg-8 tech-content">
+                            <h2><a routerLink="/services/{{service?.sl_service_image?.title}}/">
+                                {{ service.sl_service_name }}
+                            </a></h2>
+                            <p [innerHtml]="service.sl_service_sub_text">            
+                            </p>
+                            <a routerLink="/services/{{service?.sl_service_image?.title}}/"
+                             class="btn btn-lg btn-default">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

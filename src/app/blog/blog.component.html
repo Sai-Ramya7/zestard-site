@@ -1,0 +1,105 @@
+<!-- <div id="content" class="site-content"> -->
+    <section>
+        <div class="blog-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="hestia-title">Latest Blog</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="primary" class="content-area blog-list">
+        <main id="main" class="site-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 blog-posts-wrap">
+                        <article *ngFor="let post of posts"
+                        id="post-{{post?.id}}" 
+                        class="post-{{post?.id}} post type-post status-publish 
+                        format-standard has-post-thumbnail hentry 
+                        category-design category-tips-and-tricks card" style="margin-bottom: 20px">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="card-image">
+                                        <a class="post-thumbnail"
+                                        routerLink="{{post.id}}/" 
+                                        aria-hidden="true" tabindex="-1">
+                                            <img src="" 
+                                            alt="img" width="750px"
+                                            height="320px"
+                                            class="attachment-post-thumbnail size-post-thumbnail wp-post-image">
+                                        </a>
+                                    </div>
+                                    <div class="section-desc">
+                                        <header class="entry-header">
+                                            <h2 class="card-title entry-title">
+                                                <a routerLink="{{post.id}}/" rel="bookmark">
+                                                    {{post?.title.rendered}}
+                                                </a>
+                                            </h2>
+                                        </header>
+                                        <div class="card-description"
+                                        [innerHtml]="post?.excerpt.rendered">
+                                        </div>
+                                    </div>
+                                    <footer class="blog-section-footer">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="author">By
+                                                    <a href="" class="vcard author">
+                                                        <strong class="fn">{{post.author}}</strong>
+                                                    </a>,
+                                                    <a href="">
+                                                        <time>{{post?.date | date:shortDate }}</time>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="read-more-link">
+                                                    <a routerLink="{{post.id}}/">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </article>   
+                    </div>
+                    <div class="col-md-4 blog-sidebar-wrapper col-md-offset-0">
+                        <div id="secondary" class="widget-area">
+                            <section id="categories-2" class="widget widget_categories">
+                                <div class="card">
+                                    <h2 class="widget-title">
+                                        Categories
+                                    </h2>
+                                    <ul>
+                                        <li *ngFor="let category of categories"
+                                        class="cat-item cat-item-12">
+                                            <a href="">{{category.name}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="recent-posts-2" class="widget widget_recent_entries">
+                                <div class="card">
+                                    <h2 class="widget-title">
+                                        Recent Posts
+                                    </h2>
+                                    <ul>
+                                        <li *ngFor="let post of posts | slice:0:4;let i=index;">
+                                            <span>
+                                                <a href="">{{post?.title.rendered}}</a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<!-- </div> -->

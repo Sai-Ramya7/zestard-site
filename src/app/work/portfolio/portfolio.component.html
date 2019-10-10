@@ -1,0 +1,56 @@
+<div id="page" class="site portfolio-page">
+    <div id="content" class="site-content">
+        <section>
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                            <img src="{{portfolio?.acf?.header_mascot}}" alt="">
+                        </div>
+                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                            <div class="page-detail">
+                                <h5>{{portfolio?.acf.header_section_title}}</h5>
+                                <h1 class="title">
+                                    {{portfolio?.acf.header_page_title}}
+                                </h1>
+                                <h4 class="sub-title">
+                                    {{portfolio?.acf.header_sub_text}}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio-contaner">
+            <div class="all-portfolio">
+                <div class="container">
+                    <div class="row portfolio-list">
+                        <div *ngFor="let item of portfolioPosts"
+                        class="col-lg-3 col-md-4 col-sm-6 col-12">
+                            <div class="project">
+                                <a href="javascript:void(0);"
+                                class="project-img">
+                                    <img src="{{item?.acf.pf_project_logo.url}}" alt="">
+                                    <div class="img-hover-color"></div>
+                                </a>
+                                <div class="project-title">
+                                    <h5><em>{{ item.title.rendered}}</em></h5>
+                                    <span style="display: none;">
+                                        "Logestics, Trading"
+                                        <b _ngcontent-c14></b>
+                                    </span>
+                                </div>
+                                <a href="javascript:void(0);" 
+                                style="display: none;"
+                                class="info-project">
+                                <i aria-hidden="true" class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

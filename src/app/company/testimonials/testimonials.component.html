@@ -1,0 +1,58 @@
+<div class="page-template-template-testimonials">
+    <div id="content" class="site-content">
+        <section>
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                            <img class="career-avatar" src="{{testimonial?.acf.header_mascot}}" alt="">
+                        </div>
+                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                            <div class="page-detail">
+                                <h5>{{ testimonial?.acf.header_section_title }}</h5>
+                                <h1 class="title">{{ testimonial?.acf.header_page_title }}</h1>
+                                <h4 class="sub-title">{{ testimonial?.acf.header_sub_text }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <p></p>
+            <div class="row grid testimonial-list">
+                <div *ngFor="let item of testimonialDetails"
+                class="col-lg-4 col-md-6 col-sm-6 col-12 grid-item">
+                    <div class="testimonial-wrapper card">
+                        <div class="speaks">
+                            <i class="coma">
+                                <img class="img-responsive" alt=""
+                                src="https://www.zestard.com/wp-content/themes/zestard/images/testimonials/quote-icon.png">
+                            </i>
+                            <span [innerHtml]="item.content.rendered"></span>
+                        </div>
+                        <div class="client-name card-footer">
+                            <h5>{{ item.title.rendered }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>
+<!-- <ul class="list-unstyled list-inline">
+    <li *ngFor="let item of testimonialDetails" 
+    style="height: auto;"
+    class="list-inline-item testimonialcard">
+        <div class="card" style="width: 18.75rem; height: auto;">
+            <div class="card-body">
+                <i class="fa fa-quote-left quotes"></i>
+                <p class="card-text" 
+                [innerHtml]="item.content.rendered"></p>            
+            </div>
+            <div class="card-footer">
+                <h5>{{ item.title.rendered }}</h5>
+            </div>
+        </div>
+    </li>
+</ul> -->

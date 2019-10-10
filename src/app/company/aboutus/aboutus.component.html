@@ -1,0 +1,121 @@
+<div class="site about-page" id="page">
+    <section>
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 vector">
+                        <img class="about-avatar" 
+                        src="{{home?.acf.header_mascot}}" alt="mascot">
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                        <div class="page-detail">
+                            <h5>{{home?.acf.header_section_title}}</h5>
+                            <h1 class="title">
+                                {{home?.acf.header_page_title}}
+                            </h1>
+                            <h4 class="sub-title">
+                                {{home?.acf.header_sub_text}}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="who-we-are">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-lg-7">
+                        <h2 class="title">{{whoweare?.gen_heading_rvld}}</h2>
+                        <p [innerHtml]="whoweare?.gen_description_rvld"></p>
+                    </div>
+                    <div class="col-md-5 col-lg-5">
+                        <div [innerHtml]="whoweare?.gen_video_rvld | keepHtml">        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="our-values">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h2 class="title">{{ourValues?.gen_grid_box_title}}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngFor="let value of ourValues?.gen_grid_boxes_rep"
+                    class="col-lg-3 col-md-6 col-sm-6 our-values-box-wrapper">
+                        <div class="our-values-box text-center">
+                            <div class="icon">
+                                <img class="normal" alt=""
+                                src="{{value?.gen_icon_gb.url}}">
+                            </div>
+                            <h3>{{value?.gen_title_gb}}</h3>
+                            <p>{{value?.gen_description_gb}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="industry">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 border-right">
+                        <div class="industry-wrapper m-xs-0 m-sm-0 mb-sm-4">
+
+                        </div>                        
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="trusted_wrapper m-xs-0  m-sm-0 m-md-0 mt-xs-4 mt-sm-4">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="why-choose">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h2 class="title">Why Choose Us</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div *ngFor="let item of whychooseus?.lird_icons_&_description"
+                    class="col-lg-6 col-md-6 col-sm-6">
+                    hi
+                    </div> -->
+                    {{ whychooseus?.lird_icons__description }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-provide">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h1 class="title">
+                        <span>Let's</span>
+                        <br>
+                        <b>Perform Your Idea Now!</b>
+                    </h1>
+                    <h4 class="subtitle">
+                        Do you have a product idea you're passionate about?
+                        <br><br>
+                        A market you want to own?
+                    </h4>
+                    <a class="get-in-touch btn btn-primary" targrt="_blank" 
+                    routerLink="/contact-us/">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

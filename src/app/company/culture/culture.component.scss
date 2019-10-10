@@ -1,0 +1,181 @@
+.page-header{
+    margin: 0px;
+    padding: 50px 0px;
+    margin-top: 53px;
+    @media screen and (max-width: 575px){
+        padding: 30px 0;
+    }
+}
+.page-header {
+    background-image: url('./../../images/common-banner.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @media(max-width: 767px){
+        background: linear-gradient(-14deg, #009fff 21%, #0974d5 30%, #053ab1 46%, #06284e 92%);
+    }
+    img { 
+        display: block;
+        margin: 0 auto;
+        height: 320px;
+        width: 380px;
+        @media only screen and (max-width: 576px) {
+            height: 250px;
+        }
+    }
+    h5 {
+        font-size: 25px;
+        font-weight: 300;
+        color: #ffffff;
+        line-height: 30px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
+        @media screen and (max-width: 575px){
+            margin-top: 20px;
+        }
+    }
+    .title {
+        font-family: 'Open Sans', sans-serif;
+        color: #ffffff;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+        line-height: 60px;
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: 0px;
+        padding-bottom: 10px;
+        &:after {
+            width: 73px;
+            background: #33a2de;
+            height: 5px;
+            content: "";
+            position: absolute;
+            left: 4px;
+            bottom: 0;
+        }
+        @media(max-width: 767px){
+            font-size: 38px;
+        }
+    }
+    .sub-title {
+        font-family: 'Roboto', sans-serif;
+        color: #ffffff;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 17px;
+        line-height: 25px;
+        margin-top: 8px;
+    }
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+}
+.col-md-6.col-sm-6{
+    @media only screen and (max-width: 575px) {
+      &:first-child {
+          margin-top: 15px;
+      }
+
+      &:last-child {
+          margin-bottom: 15px;
+      }
+    }
+.card{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.events-wrapper{
+        height: calc(100% - 60px);
+        @media only screen and (max-width: 575px) {
+            height: calc(100% - 30px);
+            // margin-bottom: 30px;
+            // margin-top: 30px;
+            margin: 15px 0px;
+        }
+    .gallery-image{
+        height: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        @media only screen and (max-width: 420px){
+            height: 200px;
+        }
+        img {
+            width: 288px;
+            height: 200px;
+        }
+        .view-more{
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.52);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: visibility 0s, opacity 0.5s linear;
+            visibility: hidden;
+            opacity: 0;
+            a{
+                color: #ffffff;
+                border: 1px solid #ffffff;
+                padding: 5px 15px;
+                border-radius: 3px;
+            }
+        }
+
+        &:hover .view-more{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .event-title{
+        h3{
+            margin: 0;
+            font-size: 1.4625em;
+            @media only screen and (max-width: 575px) {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+}
+/* Single Event */
+.culture-header{
+    background-image: url('./../../images/blog-banner.png');
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom: 110px;
+     @media only screen and (max-width: 767px) {
+        background: linear-gradient(-14deg, #009fff 21%, #0974d5 30%, #053ab1 46%, #06284e 92%);
+    }
+    h1.culture-title{
+        @media(max-width: 767px){
+            font-size: 2.5rem;
+            margin: 0px;
+        }
+    }
+}
+.event-gallery{
+    padding: 70px 0px; 
+    @media(min-width: 320px) and (max-width:576px){
+      padding: 40px 0px;  
+    }
+    a{
+        @media(min-width: 320px) and (max-width:576px){
+            margin: 5px 0px;
+            display: block;
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
