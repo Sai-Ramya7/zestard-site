@@ -20,13 +20,13 @@ export class ConfigService {
     return this.http.get('https://www.zestard.com/wp-json/acf/v3/pages/169');
   }
   getCultureEvents() {
-    return this.http.get('http://zestard.com/wp-json/wp/v2/event');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/event');
   }
   getCareers() {
-    return this.http.get('http://zestard.com/wp-json/acf/v3/pages/167');
+    return this.http.get('https://zestard.com/wp-json/acf/v3/pages/167');
   }
   getCareerDetails() {
-    return this.http.get('http://zestard.com/wp-json/wp/v2/career');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/career');
   }
   getCareerCategory(id) {
     return this.http.get(`https://www.zestard.com/wp-json/wp/v2/career_category/${id}`);
@@ -35,7 +35,7 @@ export class ConfigService {
     return this.http.get('https://www.zestard.com/wp-json/acf/v3/pages/1646');
   }
   getTestimonialDetails() {
-    return this.http.get('http://zestard.com/wp-json/wp/v2/testimonials');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/testimonials');
   }
   getPartnership() {
     return this.http.get('https://www.zestard.com/wp-json/acf/v3/pages/103');
@@ -87,28 +87,28 @@ export class ConfigService {
     return this.http.get('https://www.zestard.com/wp-json/acf/v3/pages/85');
   }
   getPortfolioPosts() {
-    return this.http.get('http://zestard.com/wp-json/wp/v2/portfolio');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/portfolio');
   }
 
 
   // blog
   getAllPosts() {
-    return this.http.get('http://zestard.com/wp-json/wp/v2/posts?_embed');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/posts?_embed');
   }
   getPostImage(id) {
     return this.http.get(`https://zestard.com/wp-json/wp/v2/media/${id}`);
   }
   getPostById(id) {
-    return this.http.get(`http://zestard.com/wp-json/wp/v2/posts/${id}?_embed`);
+    return this.http.get(`https://zestard.com/wp-json/wp/v2/posts/${id}?_embed`);
   }
   getAllCategories() {
-    return this.http.get('http://zestard.com/wp-json/wp/v2/categories');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/categories');
   }
   getPostsByCategory(id) {
-    return this.http.get(`http://zestard.com/wp-json/wp/v2/posts/?categories=${id}`);
+    return this.http.get(`https://zestard.com/wp-json/wp/v2/posts/?categories=${id}`);
   }
   getAuthor(id) {
-    return this.http.get(`http://zestard.com/wp-json/wp/v2/users/${id}`);
+    return this.http.get(`https://zestard.com/wp-json/wp/v2/users/${id}`);
   }
 
   // contact
