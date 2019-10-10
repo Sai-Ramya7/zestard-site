@@ -121,12 +121,12 @@ export class ConfigService {
     return this.http.get('https://www.zestard.com/wp-json/acf/v3/pages/1664');
   }
   getPrivacyDetails() {
-    return this.http.get('http://zestard.com/wp-json/wp/v2/pages/1664');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/pages/1664');
   }
   getTerms() {
     return this.http.get('https://www.zestard.com/wp-json/acf/v3/pages/1667');
   }
   getTermsDetails() {
-    return this.http.get('http://zestard.com/wp-json/wp/v2/pages/1667');
+    return this.http.get('https://zestard.com/wp-json/wp/v2/pages/1667');
   }
 }
