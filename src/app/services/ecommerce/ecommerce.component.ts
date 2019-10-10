@@ -8,8 +8,8 @@ import { ConfigService } from 'src/app/config.service';
 })
 export class EcommerceComponent implements OnInit {
 
-  ecommerceDetails: any[];
-  services: any[];
+  ecommerceDetails: any;
+  services: any;
 
   constructor(private service: ConfigService) { }
 
