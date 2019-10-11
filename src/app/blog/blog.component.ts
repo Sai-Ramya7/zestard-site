@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ConfigService } from '../config.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -10,9 +11,13 @@ import { ConfigService } from '../config.service';
 export class BlogComponent implements OnInit {
 
   posts: any;
+  catPosts: any;
+  clickCat = false;
+  catName: string;
   categories: any;
 
-  constructor(private service: ConfigService) { }
+  constructor(private service: ConfigService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.getAllPosts();
@@ -30,6 +35,16 @@ export class BlogComponent implements OnInit {
     this.service.getAllCategories().subscribe((result: any) => {
       this.categories = result;
       console.log('categories', this.categories);
+    });
+  }
+
+  clickCategory(id, name) {
+    this.catName = name;
+    this.clickCat = true;
+    console.log('catid', id);
+    this.service.getPostsByCategory(id).subscribe((result: any) => {
+      this.catPosts = result;
+      console.log('postsbyCategory', this.catPosts);
     });
   }
 
